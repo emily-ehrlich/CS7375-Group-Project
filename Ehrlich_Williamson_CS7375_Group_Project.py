@@ -11,6 +11,9 @@ from sklearn.metrics import classification_report, confusion_matrix, accuracy_sc
 from imblearn.over_sampling import SMOTE
 import seaborn as sns
 import matplotlib.pyplot as plt
+from sklearn.svm import SVC
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import StandardScaler
 
 # variable to hold number of mfcc samples to take
 n_mfcc = 40
