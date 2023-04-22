@@ -18,9 +18,9 @@ import matplotlib.pyplot as plt
 n_mfcc = 40
 
 # Set the path to the full UrbanSound dataset
-audio_files = './UrbanSound8K/audio/'
+audio_files = '/Users/Emily/Documents/GitHub/CS7375-Group-Project/UrbanSound8K/audio'
 # Set path to metadata csv file included with UrbanSound dataset
-metadata = pd.read_csv('./UrbanSound8k/metadata/UrbanSound8K.csv')
+metadata = pd.read_csv('/Users/Emily/Documents/GitHub/CS7375-Group-Project/UrbanSound8K/metadata/UrbanSound8K.csv')
 
 
 # function to generate mfcc values from audio files
@@ -86,7 +86,7 @@ model.add(layers.Dense(50, activation='relu'))
 model.add(layers.Dense(2, activation='softmax'))
 model.summary()
 
-best_model_weights = './model/base.model'
+best_model_weights = './models/base.model2'
 checkpoint = ModelCheckpoint(
     best_model_weights,
     monitor='accuracy',
@@ -121,6 +121,6 @@ plt.title('Training and validation accuracy')
 plt.legend()
 plt.show()
 
-model.save_weights('./model/base.model2/dog_model_weights.h5')
-model.save('./model/base.model2/dog_model.h5')
+model.save_weights('./models/base.model2/dog_model_weights.h5')
+model.save('./models/base.model2/dog_model.h5')
 
