@@ -174,7 +174,7 @@ print("\nAccuracy Score:")
 print(accuracy_score(y_test, y_pred))
 
 
-# This section generates a figure showing the confusion matrix after SMOTE with labels-just a clearer way to view data
+# This section generates a figure showing the confusion matrix after SVC with labels-just a clearer way to view data
 class_labels = ['Dog Bark', 'Not Dog Bark']
 # Create a heatmap of the confusion matrix with row labels
 plt.figure(figsize=(8, 6))
